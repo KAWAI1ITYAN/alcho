@@ -1,0 +1,38 @@
+@import '../../../../shared/styles/mixins';
+
+.head {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  height: 40px;
+}
+
+.yellow {
+  background-color: #FFD050;
+}
+
+.purple {
+  background-color: #592EA9;
+}
+
+.table {
+  background-color: #F6F3FA;
+  margin: 100px 0;
+}
+
+.conditions {
+  padding: 40px;
+}
+
+.values {
+  padding: 40px;
+  margin-top: 100px;
+}
+
+.data {
+  @include flex(center, space-between);
+  padding: 20px 40px 40px 40px;
+}
+
+.text {
+  @include font(16px, unset, unset, #6D6E76)
+}

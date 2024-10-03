@@ -1,0 +1,35 @@
+@import '../../../../shared/styles/mixins';
+
+.title {
+  text-align: center;
+}
+
+.block {
+  margin-top: 100px;
+}
+
+.text {
+  @include font(24px, 700, unset, #161722 )
+}
+
+.three {
+  margin-left: 10%;
+  margin-top: 50px;
+
+}
+
+.one, .five {
+  margin-top: 50px;
+}
+
+.four {
+  margin-left: 20%;
+  margin-top: 50px;
+
+}
+
+.one {
+  text-align: center;
+  @include font(20px, unset, unset, #4F4F54);
+  margin-top: 50px;
+}

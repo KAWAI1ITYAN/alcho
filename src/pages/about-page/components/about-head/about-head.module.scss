@@ -1,0 +1,53 @@
+@import '../../../../shared/styles/mixins';
+
+.section {
+    @include flex(center, space-around);
+    background: url('../../../../assets/img/country_house.png');
+}
+
+
+.title {
+    @include font(40px);
+    text-align: center;
+
+    &_block {
+        @include flex(center, center, 10px, column);
+        max-width: 550px;
+    }
+}
+
+.desc {
+    text-align: center;
+    @include font(30px);
+}
+
+.text {
+    @include font(18px, 700, unset, rgba(155, 155, 155, 1));
+    text-align: center;
+}
+
+.form {
+    background-color: rgba(251, 246, 234, 1);
+    padding: 40px;
+    max-width: 500px;
+    @include flex(center, center, 12px, column);
+    border-radius: 10px;
+
+    input {
+        @include font(18px, unset, unset);
+        background-color: transparent;
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid #000;
+        outline: none;
+        width: 60%;
+    }
+}
+
+.btn {
+    background-color: rgba(255, 208, 80, 1);
+    @include font(18px, 700, unset);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+}

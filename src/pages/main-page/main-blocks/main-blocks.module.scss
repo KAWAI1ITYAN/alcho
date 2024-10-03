@@ -1,0 +1,6 @@
+@import '../../../shared/styles/mixins';
+
+.block {
+    @include flex(center, space-around, 40px);
+    margin-top: 50px;
+}

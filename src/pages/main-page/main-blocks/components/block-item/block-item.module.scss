@@ -1,0 +1,23 @@
+@import '../../../../../shared/styles/mixins';
+
+.block {
+    padding: 20px;
+    box-shadow: -2px 4px 10px 3px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;
+    max-width: 500px;
+    height: 220px;
+
+    &:hover {
+        background-color: rgba(255, 208, 80, 1);
+    }
+}
+
+.title {
+    text-align: center;
+    @include font(20px, 700);
+}
+
+.description {
+    text-align: center;
+    @include font(20px, 400);
+}

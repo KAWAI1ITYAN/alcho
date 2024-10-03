@@ -1,0 +1,30 @@
+@import '../../../shared/styles/mixins';
+
+.footer {
+  background-color: rgba(48, 53, 62, 1);
+
+  &_text {
+    padding: 5px 300px;
+    @include flex(center, space-between);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.text {
+  text-align: center;
+  @include font(22px, 300, unset, #fff)
+}
+
+.rf {
+  max-width: 450px;
+  @include flex(center, unset, 0px, column);
+}
+
+.address {
+  @include font(16px, 300, unset, #fff);
+
+  &_block {
+    @include flex(unset, space-between, 0px, column);
+  }
+}

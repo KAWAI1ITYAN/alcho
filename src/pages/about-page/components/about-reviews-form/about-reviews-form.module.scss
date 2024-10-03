@@ -1,0 +1,60 @@
+@import '../../../../shared/styles/mixins';
+
+.block {
+  margin-top: 100px;
+  box-shadow: -2px 4px 10px 3px rgba(34, 60, 80, 0.2);
+  padding: 40px;
+  background-color: #F8F8F8;
+  border-radius: 6px;
+
+}
+
+.head {
+  @include flex(center, space-between)
+}
+
+.close {
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(229, 229, 229, 0.51);
+    border-radius: 50%;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.input, .textarea {
+  font-size: 18px;
+  box-shadow: -2px 4px 5px 3px rgba(34, 60, 80, 0.2);
+  border-radius: 6px;
+  padding: 12px 24px;
+  width: 50%;
+  border: none;
+  outline: none;
+}
+
+.form {
+  @include flex(center, unset, 20px, column)
+}
+
+.textarea {
+  min-height: 250px;
+  resize: none;
+  @include scroll();
+}
+
+.btn {
+  background-color: #FFD050;
+  padding: 12px 24px;
+  cursor: pointer;
+  @include font(18px, 700);
+  border: none;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #d7b046;
+  }
+}

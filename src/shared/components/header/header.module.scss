@@ -1,0 +1,33 @@
+@import '../../../shared/styles/mixins';
+
+.header {
+    background-color: rgba(48, 53, 62, 1);
+
+    &_text {
+        padding: 5px 300px;
+        @include flex(center, space-between);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+.logo {
+    text-decoration: none;
+    @include flex(center);
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+}
+.name {
+    @include font(22px, unset, unset, #fff);
+}
+
+.link {
+    @include font(18px, unset, unset, #fff);
+    text-decoration: none;
+}
+
+.links {
+    @include flex(center, space-between, 64px);
+}

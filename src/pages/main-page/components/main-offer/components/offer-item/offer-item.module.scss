@@ -1,0 +1,13 @@
+@import '../../../../../../shared/styles/mixins';
+
+.block {
+     @include flex(center, flex-end, 20px);
+    &_text {
+        @include flex(center, unset, 20px);
+        width: 50%;
+    }
+}
+
+.txt {
+    @include flex(unset, center, 10px, column);
+}
