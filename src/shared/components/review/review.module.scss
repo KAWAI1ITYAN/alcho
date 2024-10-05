@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+
+.reviews {
+  border: 1px solid #d0d0d0;
+  padding: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #e7e4e4;
+  }
+}
+
+
+.info {
+  @include font(14px, 500, unset, #4C4C4C)
+}
+
+.text {
+  @include font(24px, 700)
+}

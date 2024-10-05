@@ -1,3 +1,31 @@
+@import "../../../../shared/styles/mixins";
+
 .block {
+  @include flex(unset, unset, 10px, column);
+  border: 1px solid #d0d0d0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  padding: 12px 24px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e7e4e4;
+  }
+
+  &_block {
+    margin-top: 50px;
+    @include flex(center, center);
+  }
+}
+
+.title {
   margin-top: 100px;
+  text-align: center;
 }

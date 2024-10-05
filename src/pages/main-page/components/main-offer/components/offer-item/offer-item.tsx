@@ -12,7 +12,7 @@ interface Props {
 export const OfferItem: FC<Props> = ({ title, desc, status }) => {
     return (
         <div
-            className={cn('', {
+            className={cn(styles.offer, {
                 [styles.block]: status,
             })}
         >

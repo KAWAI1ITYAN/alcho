@@ -5,7 +5,6 @@ import styles from './footer.module.scss';
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-
       <Header />
       <div className={styles.footer_text}>
 
@@ -21,7 +20,6 @@ export const Footer = () => {
         </span>
 
       </div>
-
     </footer>
   );
 };

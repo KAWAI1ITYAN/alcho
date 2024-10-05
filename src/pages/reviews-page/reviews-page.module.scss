@@ -1,0 +1,14 @@
+@import "../../shared/styles/mixins";
+
+.container {
+  @include flex(unset, unset, 20px, column);
+  max-width: 1200px;
+  margin: 30vh auto;
+
+
+}
+
+.no_reviews {
+  @include font(30px, 600, unset, #e75d5d);
+  text-align: center;
+}

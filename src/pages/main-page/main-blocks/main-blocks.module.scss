@@ -3,4 +3,8 @@
 .block {
     @include flex(center, space-around, 40px);
     margin-top: 50px;
+
+    @media (max-width: 1400px) {
+        @include flex(center,unset, 30px, column);
+    }
 }

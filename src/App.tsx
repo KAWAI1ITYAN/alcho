@@ -1,7 +1,7 @@
 import './App.css';
 import { Header } from 'shared/components/header/header';
-import { Router } from 'shared/router/router';
 import { Footer } from 'shared/components/footer/footer';
+import { Router } from 'shared/router/router';
 
 function App() {
   return (

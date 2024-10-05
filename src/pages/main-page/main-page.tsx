@@ -4,8 +4,14 @@ import { MainOffer } from './components/main-offer/main-offer';
 import { MainHead } from './components/main-head/main-head';
 import { MainBlock } from './main-blocks/main-blocks';
 import styles from './main-page.module.scss';
+import { useEffect } from 'react';
 
 export const MainPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = 'Главная';
+  }, []);
+
   return (
     <div className={styles.container}>
       <MainHead />

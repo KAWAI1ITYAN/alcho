@@ -1,13 +1,27 @@
 @import '../../../../../../shared/styles/mixins';
 
 .block {
-     @include flex(center, flex-end, 20px);
-    &_text {
-        @include flex(center, unset, 20px);
-        width: 50%;
+  @include flex(center, flex-end, 20px);
+
+  @media (max-width: 1400px) {
+    @include flex(center, center, 30px, column);
+  }
+
+  &_text {
+    @include flex(center, unset, 20px);
+    width: 50%;
+    @media (max-width: 1400px) {
+      width: 100%;
     }
+  }
 }
 
 .txt {
-    @include flex(unset, center, 10px, column);
+  @include flex(unset, center, 10px, column);
+}
+.offer {
+  @media (max-width: 1400px) {
+    @include flex(center, center, 30px, column);
+    width: 100%;
+  }
 }

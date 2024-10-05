@@ -1,13 +1,25 @@
 @import '../../../shared/styles/mixins';
 
 .footer {
-  background-color: rgba(48, 53, 62, 1);
+  width: 100%;
+  min-width: 500px;
 
   &_text {
     padding: 5px 300px;
     @include flex(center, space-between);
-    max-width: 1200px;
+    background-color: rgba(48, 53, 62, 1);
+    min-width: 100%;
+    max-width: unset;
     margin: 0 auto;
+
+    @media (max-width: 1400px) {
+      @include flex(center, unset, 20px, column);
+    }
+    @media (max-width: 550px) {
+      width: 1000px;
+      margin: 0 auto;
+      padding: 0 100px;
+    }
   }
 }
 
