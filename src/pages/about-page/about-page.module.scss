@@ -1,5 +1,19 @@
+@import '../../shared/styles/mixins';
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 50px 300px;
+
+  @media (max-width: 1400px) {
+    padding: 50px 300px;
+    max-width: unset;
+    width: 100%;
+  }
+
+  @media (max-width: 550px) {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 100px;
+  }
 }

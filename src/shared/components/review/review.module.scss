@@ -4,6 +4,7 @@
   border: 1px solid #d0d0d0;
   padding: 20px;
   border-radius: 10px;
+  cursor: default;
 
   &:hover {
     background-color: #e7e4e4;
@@ -16,5 +17,6 @@
 }
 
 .text {
-  @include font(24px, 700)
+  @include font(24px, 700);
+  word-break: break-word;
 }

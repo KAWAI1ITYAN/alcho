@@ -1,26 +1,50 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Review } from 'shared/types/types';
+import { bidI, ReviewCreateI, ReviewI } from 'shared/types/types';
+
 
 export const viewsApi = createApi({
   reducerPath: 'views',
   tagTypes: ['Views'],
   baseQuery: fetchBaseQuery({
-    baseUrl: 'BASE_URL'
+    baseUrl: `http://127.0.0.1:8000/api/`
   }),
   endpoints: builder => ({
-    createReview: builder.mutation<Review, void>({
+    createReview: builder.mutation<void, ReviewCreateI>({
       query: body => ({
-        url: '/api/v1/create',
+        url: 'reviews/create',
         method: 'POST',
         body
       }),
       invalidatesTags: [{ type: 'Views', id: 'LIST' }]
     }),
 
-    getViews: builder.query<Review[], void>({
-      query: id => `/api/v1/analysis/correct/${id}`
+    createBid: builder.mutation<void, bidI>({
+      query: body => ({
+        url: 'bid/create',
+        method: 'POST',
+        body
+      })
+    }),
+
+    getViews: builder.query<ReviewI[], void>({
+      query: () => ({
+        url: 'reviews/',
+        providesTags: ['Views']
+      })
+    }),
+
+    getLatestViews: builder.query<ReviewI[], void>({
+      query: () => ({
+        url: 'reviews/latest',
+        providesTags: ['Views']
+      })
     })
   })
 });
 
-export const { useGetViewsQuery, useCreateReviewMutation } = viewsApi;
+export const {
+  useCreateBidMutation,
+  useGetLatestViewsQuery,
+  useGetViewsQuery,
+  useCreateReviewMutation
+} = viewsApi;

@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Review } from 'shared/types/types';
+import { ReviewI } from 'shared/types/types';
 
 interface Props {
   isOpen: boolean;
-  reviews: Review[];
+  reviews: ReviewI[];
 }
 
 const initialState: Props = {

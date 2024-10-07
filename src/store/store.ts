@@ -6,11 +6,10 @@ import { viewsApi } from 'store/reviews/api';
 
 export const store = configureStore({
   reducer: {
-    [modalsSlice.name]: modalsSlice.reducer
+    [modalsSlice.name]: modalsSlice.reducer,
+    [viewsApi.reducerPath]: viewsApi.reducer
   },
-  // middleware: (getDefaultMiddleware) =>
-  //   getDefaultMiddleware().concat(viewsApi.middleware),
-
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(viewsApi.middleware)
 });
 
 export type RootState = ReturnType<typeof store.getState>

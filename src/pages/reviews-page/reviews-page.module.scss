@@ -1,14 +1,32 @@
 @import "../../shared/styles/mixins";
 
 .container {
-  @include flex(unset, unset, 20px, column);
+  margin: 30px auto;
   max-width: 1200px;
-  margin: 30vh auto;
+  border: 1px solid #d0d0d0;
+  padding: 20px;
+  border-radius: 10px;
+  @include flex(unset, unset, 30px, column);
 
+  @media (max-width: 1400px) {
+    padding: 50px 300px;
+    max-width: unset;
+    width: 100%;
+  }
 
+  @media (max-width: 550px) {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 100px;
+  }
 }
 
 .no_reviews {
   @include font(30px, 600, unset, #e75d5d);
   text-align: center;
+}
+
+.reviews {
+  text-align: center;
+
 }

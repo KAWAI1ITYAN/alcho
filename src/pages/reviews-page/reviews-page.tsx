@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
-import { useAppSelector } from 'store/store';
 import { Review } from 'shared/components/review/review';
-import { selectModal } from 'store/reviews/selectors';
+import { useGetViewsQuery } from 'store/reviews/api';
 import styles from './reviews-page.module.scss';
 
 export const ReviewsPage = () => {
-  const state = useAppSelector(selectModal);
+  const { data } = useGetViewsQuery();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,25 +13,15 @@ export const ReviewsPage = () => {
 
   return (
     <div className={styles.container}>
-      {state.reviews.length !== 0 && <>
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-      </>
+
+      <h1 className={styles.reviews}>Отзывы</h1>
+      {data?.length !== 0
+        && <>
+          {data?.map((item) => <Review text={item.text} name={item.name} date={item.date} key={item.id} />)}
+        </>
       }
 
-      {!state.reviews.length
+      {!data?.length
         && <p className={styles.no_reviews}>Отзывов пока что нет</p>}
     </div>
   );

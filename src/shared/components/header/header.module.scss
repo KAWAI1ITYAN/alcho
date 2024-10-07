@@ -8,19 +8,19 @@
     padding: 5px 300px;
     @include flex(center, space-between);
     background-color: rgba(48, 53, 62, 1);
-    min-width: 100%;
     max-width: unset;
     margin: 0 auto;
 
     @media (max-width: 1400px) {
       @include flex(center, unset, 20px, column);
+      width: 100%;
     }
 
-    @media (max-width: 550px) {
-      width: 1000px;
-      margin: 0 auto;
-      padding: 0 100px;
-    }
+      @media (max-width: 550px) {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 20px 100px;
+      }
   }
 }
 
